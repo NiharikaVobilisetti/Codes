@@ -1,0 +1,46 @@
+<!-- <p>{{cartdata.productPrice}}</p>
+<p>{{cartdata.productName}}</p>
+<p>{{cartdata.quantity}}</p> -->
+
+<!-- <div class="card bg-light mb-3" style="max-width: 18rem;"*ngFor="let p of cartdata">
+    <div class="card-body">
+      <h5 class="card-title">{{p.productName}}</h5>
+      <p class="card-text">quantity: {{p.quantity}}</p>
+    </div>
+  </div> -->
+  <!-- <div class="card " style="width: 18rem;" *ngFor="let p of cartdata">
+    <div class="w-75 ml-r mr-1">
+    <img class="card-img-top" [src]="p.url" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Product quantity:{{p.quantity}}</p>
+      
+    </div>
+    <div></div>
+  </div> -->
+  <body>
+    <div>
+        <h2>Order Details</h2>
+        <div class="card-container">
+          <div class="card" *ngFor="let order of orders">
+            <div class="card-header">
+              <h3>Order No: {{ order.Id }}</h3>
+            </div>
+            <div class="card-content">
+              <p><strong>Contact Name:</strong> {{ order.ContactName }}</p>
+              <!-- <p><strong>Order Date:</strong> {{ order.orderDate }}</p> -->
+              <!-- <p><strong>Items Ordered:</strong> {{ order.itemsOrdered }}</p> -->
+              <!-- <p><strong>Order Total:</strong> {{ order.orderTotal }}</p> -->
+              <!-- <p><strong>Tax Total:</strong> {{ order.taxTotal }}</p> -->
+              <p><strong>Grand Total:</strong> {{ order.GrandTotal }}</p>
+            </div>
+            <div class="container d-flex justify-content-center">
+                <button type="button" class="btn btn-danger btn-lg" (click)="viewOrderInfo(order.Id)">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+
+
+
